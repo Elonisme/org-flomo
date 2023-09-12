@@ -1,0 +1,56 @@
+#+TITLE: org-flomo.el
+
+* Introduction
+
+  ~org-flomo.el~ is an Emacs integration for [[https://flomoapp.com/][Flomo]], a note-taking service. It allows you to send notes to Flomo directly from within Emacs.
+
+* Features
+
+  - Seamless integration with Flomo.
+  - Easily send notes to Flomo.
+  - Customize Flomo API settings.
+
+* Installation
+
+  =Requirements:=
+  
+  You need to have Emacs installed on your system to use this package. 
+
+  1. Clone the GitHub repository:
+     #+BEGIN_SRC bash
+git clone https://github.com/elonisme/org-flomo.git ~/.emacs.d/org-flomo
+     #+END_SRC
+
+  2. Add the following to your Emacs init file:
+     #+BEGIN_SRC emacs-lisp
+(use-package org-flomo
+  :ensure nil
+  :load-path "~/.emacs.d/org-flomo/"
+  )
+     #+END_SRC
+
+  3. Place your API in the ~FlomoApi.txt~ file located in the ~org-flomo~ directory, and please note that the API should only include the part after ~https://flomoapp.com/iwh/~ .
+
+* Usage
+
+  1. Open an Org mode file and create a ~flomo~ code block. The format for a Flomo code block is as follows:
+~#+BEGIN_SRC flomo~
+
+      ~Your Content.~
+
+~#+END_SRC~
+  2. Run the command ~M-x send-to-flomo~. org-flomo will send all Flomo code blocks in this Org mode document to Flomo.
+  3.  ~Your Content~ must match flomo usage
+
+* Contribution
+
+  Contributions are welcome! If you find a bug or want to suggest an improvement, please open an issue or submit a pull request on GitHub.
+
+* License
+
+  This package is licensed under the GNU General Public License, version 3 or later. See the ~LICENSE~ file for details.
+
+* Contact
+
+  If you have any questions or need assistance, feel free to contact me at elonisme@keemail.me
+
